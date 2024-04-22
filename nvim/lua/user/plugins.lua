@@ -28,13 +28,10 @@ use('wbthomason/packer.nvim')
 
 -- Theme.
 use({
-  'navarasu/onedark.nvim',
+  'folke/tokyonight.nvim',
   config = function()
-    vim.cmd('colorscheme onedark')
+    vim.cmd('colorscheme tokyonight-moon')
 
-    require('onedark').setup({
-      style = 'deep',
-    })
     vim.api.nvim_set_hl(0, 'FloatBorder', {
       fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
       bg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
@@ -197,7 +194,7 @@ use({
 use({
   'akinsho/bufferline.nvim',
   requires = 'kyazdani42/nvim-web-devicons',
-  after = 'onedark.nvim',
+  after = 'tokyonight.nvim',
   config = function()
     require('user/plugins/bufferline')
   end,
