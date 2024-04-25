@@ -55,7 +55,10 @@ require('null-ls').setup({
         return utils.root_has_file({ '.eslintrc.js' })
       end,
     }),
-    require('null-ls').builtins.formatting.prettierd,
+    -- require('null-ls').builtins.formatting.prettierd,
+    require('null-ls').builtins.formatting.prettierd.with({
+        extra_filetypes = { "html", "json", "yaml", "markdown", "astro" },
+    })
   },
 })
 
