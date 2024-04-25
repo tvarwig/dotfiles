@@ -92,6 +92,23 @@ use({
   requires = 'kana/vim-textobj-user',
 })
 
+use({
+  "gbprod/cutlass.nvim",
+  config = function()
+    require("cutlass").setup({
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+    })
+  end
+})
+
+use ('wuelnerdotexe/vim-astro', {
+  config = function()
+    vim.g.astro_typescript = 'enable'
+    astro_stylus = 'enable'
+  end,
+})
 -- Automatically set the working directory to the project root.
 use({
   'airblade/vim-rooter',
