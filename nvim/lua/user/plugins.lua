@@ -28,9 +28,9 @@ use('wbthomason/packer.nvim')
 
 -- Theme.
 use({
-  'folke/tokyonight.nvim',
+  'navarasu/onedark.nvim',
   config = function()
-    vim.cmd('colorscheme tokyonight-moon')
+    vim.cmd('colorscheme onedark')
 
     vim.api.nvim_set_hl(0, 'FloatBorder', {
       fg = vim.api.nvim_get_hl_by_name('NormalFloat', true).background,
@@ -53,6 +53,34 @@ use({
     vim.api.nvim_set_hl(0, 'IndentBlanklineChar', { fg = '#2F313C' })
 
     vim.api.nvim_set_hl(0, 'LineNr', { fg = '#777f91' })
+
+     vim.g.onedark_config = {
+      style = 'deep',
+      italic_comments = true,
+      italic_keywords = true,
+      italic_functions = true,
+      italic_variables = false,
+      hide_inactive_statusline = true,
+      dark_sidebar = true,
+      colors = {
+        red = '#ff5370',
+        green = '#c3e88d',
+        yellow = '#ffcb6b',
+        blue = '#82aaff',
+        purple = '#c792ea',
+        aqua = '#89ddff',
+        orange = '#f78c6c',
+        cyan = '#89ddff',
+        statusline_bg = '#282c34',
+        lightbg = '#2f343f',
+        lightbg2 = '#2f343f',
+        fg = '#abb2bf',
+      },
+    }
+
+  end,
+  setup = function()
+    style = 'deep'
   end,
 })
 
@@ -211,7 +239,7 @@ use({
 use({
   'akinsho/bufferline.nvim',
   requires = 'kyazdani42/nvim-web-devicons',
-  after = 'tokyonight.nvim',
+  after = 'onedark.nvim',
   config = function()
     require('user/plugins/bufferline')
   end,
