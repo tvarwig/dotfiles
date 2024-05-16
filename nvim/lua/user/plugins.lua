@@ -219,13 +219,13 @@ use ({
 })
 
 -- -- File tree sidebar
--- use({
---   'kyazdani42/nvim-tree.lua',
---   requires = 'kyazdani42/nvim-web-devicons',
---   config = function()
---     require('user/plugins/nvim-tree')
---   end,
--- })
+use({
+  'kyazdani42/nvim-tree.lua',
+  requires = 'kyazdani42/nvim-web-devicons',
+  config = function()
+    require('user/plugins/nvim-tree')
+  end,
+})
 
 -- A Status line.
 use({
@@ -312,11 +312,11 @@ use({
   end,
 })
 
--- use({
---   "nvim-treesitter/nvim-treesitter-textobjects",
---   after = "nvim-treesitter",
---   requires = "nvim-treesitter/nvim-treesitter",
--- })
+use({
+  "nvim-treesitter/nvim-treesitter-textobjects",
+  after = "nvim-treesitter",
+  requires = "nvim-treesitter/nvim-treesitter",
+})
 
 -- -- Language Server Protocol.
 use({
