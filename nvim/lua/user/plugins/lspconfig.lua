@@ -44,6 +44,9 @@ require('lspconfig').jsonls.setup({
 -- null-ls
 require('null-ls').setup({
   sources = {
+    require('null-ls').builtins.formatting.prettier.with({
+      filetypes = { "svelte" },
+    }),
     require('null-ls').builtins.diagnostics.eslint_d.with({
       condition = function(utils)
         return utils.root_has_file({ '.eslintrc.js' })
