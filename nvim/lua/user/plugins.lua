@@ -306,6 +306,7 @@ use({
   requires = {
     -- 'ts_context_commentstring',
     'nvim-treesitter/nvim-treesitter-textobjects',
+    'jwalton512/vim-blade',
   },
   config = function()
     require('user/plugins/treesitter')
