@@ -58,6 +58,10 @@ require('null-ls').setup({
         return utils.root_has_file({ '.eslintrc.js' })
       end,
     }),
+    require('null-ls').builtins.formatting.prettier.with({
+        filetypes = { "blade" },  -- Add blade to Prettier
+        extra_args = { "--parser", "blade" },  -- Use the blade parser
+    }),
     -- require('null-ls').builtins.formatting.prettierd,
     require('null-ls').builtins.formatting.prettierd.with({
         extra_filetypes = { "html", "json", "yaml", "markdown", "astro" },
