@@ -41,7 +41,7 @@ vim.keymap.set('v', '<A-k>', ":move '<-2<CR>gv=gv")
 -- Buffer navigation.
 vim.keymap.set('n', '<Leader>x', ':bdelete<CR>')
 vim.keymap.set('n', '<TAB>', ':bnext<CR>')
-vim.keymap.set('n', '<S-TAB>', ':bnext<CR>')
+vim.keymap.set('n', '<S-TAB>', ':bprevious<CR>')
 
 -- Format
 vim.keymap.set('n', '<Leader>fm', ':vim.lsp.buf.format()<CR>')
